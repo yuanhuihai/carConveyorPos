@@ -19,7 +19,10 @@ namespace carConveyorPos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            RonePic.Hide();
+            RtwoPic.Hide();
+            RthreePic.Hide();
+            RfourPic.Hide();
         }
 
         private void Oone_Click(object sender, EventArgs e)
@@ -28,6 +31,7 @@ namespace carConveyorPos
             readingStation.BackColor = Color.Green;
             RRone.Text = carIn.Text;
             carIn.Text = null;
+            RonePic.Show();
         }
 
         private void Otwo_Click(object sender, EventArgs e)
@@ -36,6 +40,9 @@ namespace carConveyorPos
             RRone.Text = null;
             Rtwo.BackColor = Color.Green;
             Rone.BackColor = Color.White;
+            RonePic.Hide();
+            RtwoPic.Show();
+            
             readingStation.BackColor = Color.White;
 
         }
@@ -46,6 +53,8 @@ namespace carConveyorPos
             RRtwo.Text = null;
             Rthree.BackColor = Color.Green;
             Rtwo.BackColor = Color.White;
+            RtwoPic.Hide();
+            RthreePic.Show();
       
         }
 
@@ -55,6 +64,8 @@ namespace carConveyorPos
             RRthree.Text = null;
             Rfour.BackColor = Color.Green;
             Rthree.BackColor = Color.White;
+            RthreePic.Hide();
+            RfourPic.Show();
             timer1.Start();
         }
 
@@ -63,6 +74,7 @@ namespace carConveyorPos
             timer1.Interval = 5000;
             RRfour.Text = null;
             Rfour.BackColor = Color.White;
+            RfourPic.Hide();
         }
 
         private void RRone_TextChanged(object sender, EventArgs e)

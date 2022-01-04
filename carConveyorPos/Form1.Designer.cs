@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.plcPic = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,6 +53,7 @@
             this.RRthree = new System.Windows.Forms.TextBox();
             this.RRfour = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.carIn = new System.Windows.Forms.TextBox();
             this.Oone = new System.Windows.Forms.Button();
             this.Otwo = new System.Windows.Forms.Button();
@@ -65,22 +66,29 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.RonePic = new System.Windows.Forms.PictureBox();
+            this.RtwoPic = new System.Windows.Forms.PictureBox();
+            this.RthreePic = new System.Windows.Forms.PictureBox();
+            this.RfourPic = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.plcPic)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RonePic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RtwoPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RthreePic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RfourPic)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // plcPic
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.plcPic.Image = ((System.Drawing.Image)(resources.GetObject("plcPic.Image")));
+            this.plcPic.Location = new System.Drawing.Point(6, 37);
+            this.plcPic.Name = "plcPic";
+            this.plcPic.Size = new System.Drawing.Size(150, 90);
+            this.plcPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.plcPic.TabIndex = 0;
+            this.plcPic.TabStop = false;
             // 
             // label1
             // 
@@ -132,7 +140,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.plcPic);
             this.groupBox1.Controls.Add(this.plcSlot);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.plcRack);
@@ -278,6 +286,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "模拟来车信息";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(13, 82);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 15);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "信息来自PLC";
+            // 
             // carIn
             // 
             this.carIn.Location = new System.Drawing.Point(16, 42);
@@ -380,20 +397,55 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "滚床占位信号";
             // 
-            // label10
+            // RonePic
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 82);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 15);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "信息来自PLC";
+            this.RonePic.Image = global::carConveyorPos.Properties.Resources.carModel;
+            this.RonePic.Location = new System.Drawing.Point(231, 174);
+            this.RonePic.Name = "RonePic";
+            this.RonePic.Size = new System.Drawing.Size(100, 50);
+            this.RonePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RonePic.TabIndex = 29;
+            this.RonePic.TabStop = false;
+            // 
+            // RtwoPic
+            // 
+            this.RtwoPic.Image = global::carConveyorPos.Properties.Resources.carModel;
+            this.RtwoPic.Location = new System.Drawing.Point(321, 206);
+            this.RtwoPic.Name = "RtwoPic";
+            this.RtwoPic.Size = new System.Drawing.Size(100, 50);
+            this.RtwoPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RtwoPic.TabIndex = 30;
+            this.RtwoPic.TabStop = false;
+            // 
+            // RthreePic
+            // 
+            this.RthreePic.Image = global::carConveyorPos.Properties.Resources.carModel;
+            this.RthreePic.Location = new System.Drawing.Point(423, 206);
+            this.RthreePic.Name = "RthreePic";
+            this.RthreePic.Size = new System.Drawing.Size(100, 50);
+            this.RthreePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RthreePic.TabIndex = 31;
+            this.RthreePic.TabStop = false;
+            // 
+            // RfourPic
+            // 
+            this.RfourPic.Image = global::carConveyorPos.Properties.Resources.carModel;
+            this.RfourPic.Location = new System.Drawing.Point(518, 206);
+            this.RfourPic.Name = "RfourPic";
+            this.RfourPic.Size = new System.Drawing.Size(100, 50);
+            this.RfourPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RfourPic.TabIndex = 32;
+            this.RfourPic.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 409);
+            this.Controls.Add(this.RfourPic);
+            this.Controls.Add(this.RthreePic);
+            this.Controls.Add(this.RtwoPic);
+            this.Controls.Add(this.RonePic);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -419,13 +471,17 @@
             this.Name = "Form1";
             this.Text = "车身停留在指定位置滚床上";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plcPic)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RonePic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RtwoPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RthreePic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RfourPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,7 +489,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox plcPic;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -469,6 +525,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox RonePic;
+        private System.Windows.Forms.PictureBox RtwoPic;
+        private System.Windows.Forms.PictureBox RthreePic;
+        private System.Windows.Forms.PictureBox RfourPic;
     }
 }
 
